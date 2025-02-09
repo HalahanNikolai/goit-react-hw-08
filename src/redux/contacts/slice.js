@@ -5,6 +5,7 @@ import {
   deleteContact,
 } from './operations';
 import { createSelector } from 'reselect';
+import { logoutThunk } from '../auth/operations';
 
 export const contactInitialState = {
   items: [],
@@ -44,6 +45,7 @@ const contactsSlice = createSlice({
       .addCase(fetchContacts.fulfilled, handleFulfieldGetAllContacts)
       .addCase(addContact.fulfilled, handleFulfieldAddContact)
       .addCase(deleteContact.fulfilled, handleFulfieldDeleteContact)
+      .addCase(logoutThunk.fulfilled, () => contactInitialState)
       .addMatcher(
         action => action.type.endsWith('/pending'),
         state => {
