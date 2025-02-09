@@ -8,8 +8,8 @@ import Contacts from '../pages/Contacts/Contacts';
 import NotFound from '../pages/NotFound/NotFound';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
-import { refreshUser } from '../redux/auth/authOperations';
-import { selectIsRefreshing } from '../redux/auth/authSelectors';
+import { refreshUser } from '../redux/auth/operations';
+import { selectIsRefreshing } from '../redux/auth/selectors';
 import PrivateRoute from './PrivateRoutes';
 import PublicRoute from './PublicRoute';
 

@@ -1,4 +1,4 @@
-import { setQueryFilter } from '../../redux/filters/filtersSlice';
+import { setQueryFilter } from '../../redux/filters/slice';
 import { FilterInput } from './Filter.styled';
 import { useDispatch } from 'react-redux';
 

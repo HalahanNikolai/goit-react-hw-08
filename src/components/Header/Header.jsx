@@ -2,8 +2,8 @@
 import { AppBar, Toolbar, Container } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router';
-import { selectIsLoggedIn, selectUser } from '../../redux/auth/authSelectors';
-import { logoutThunk } from '../../redux/auth/authOperations';
+import { selectIsLoggedIn, selectUser } from '../../redux/auth/selectors';
+import { logoutThunk } from '../../redux/auth/operations';
 
 //* name(pin): "Vasya"
 //* email(pin): "vasya_qwerty@gmail.com"

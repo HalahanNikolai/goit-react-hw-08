@@ -2,7 +2,7 @@
 import { Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router";
-import { registerThunk } from "../../redux/auth/authOperations";
+import { registerThunk } from "../../redux/auth/operations";
 
 const Register = () => {
     const initialValues = {

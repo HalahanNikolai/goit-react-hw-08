@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 
-import { addContact } from '../../redux/contacts/contactsOperation';
+import { addContact } from '../../redux/contacts/operations';
 
 import { FormWrap, InputContainer, ContactLabel, ContactInput, AddContactButton } from './ContactForm.styled';
-import { selectContactsList } from '../../redux/contacts/contactsSlice';
+import { selectContactsList } from '../../redux/contacts/slice';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();

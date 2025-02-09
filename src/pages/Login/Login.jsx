@@ -1,7 +1,7 @@
 import { Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router";
-import { loginThunk } from "../../redux/auth/authOperations";
+import { loginThunk } from "../../redux/auth/operations";
 const Login = () => {
     const initialValues = {
         password: '',
