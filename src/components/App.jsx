@@ -9,7 +9,7 @@ import NotFound from '../pages/NotFound/NotFound';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import { refreshUser } from '../redux/authOperations';
-import { selectIsRefreshing } from '../redux/selectors';
+import { selectIsLoggedIn, selectIsRefreshing } from '../redux/selectors';
 import PrivateRoute from './PrivateRoutes';
 import PublicRoute from './PublicRoute';
 
@@ -20,16 +20,16 @@ const App = () => {
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
-
+  console.log('Log?:,', selectIsLoggedIn)
   return isRefreshing ? null : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="/contacts" element={<PrivateRoute > <Contacts /> </PrivateRoute>} />
-
       </Route>
-      <Route path="/register" element={<PublicRoute> <Register /></PublicRoute>} />
-      <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
+      <Route path="/register" element={<Register />} />
+      {/* <Route path="/register" element={<PublicRoute> <Register /></PublicRoute>} /> */}
+      <Route path="/login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

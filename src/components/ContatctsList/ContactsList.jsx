@@ -14,7 +14,7 @@ import { fetchContacts } from '../../redux/contactsOps';
 const ContactList = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  console.log('isLoggedIn:', isLoggedIn)
+  // console.log('isLoggedIn:', isLoggedIn)
   useEffect(() => {
     if (isLoggedIn) {
       dispatch(fetchContacts());

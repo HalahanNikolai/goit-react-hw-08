@@ -1,7 +1,7 @@
 
 import { AppBar, Toolbar, Container } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router';
+import { NavLink, redirect } from 'react-router';
 import { selectIsLoggedIn, selectUser } from '../../redux/selectors';
 import { logoutThunk } from '../../redux/authOperations';
 
@@ -19,7 +19,7 @@ const Header = () => {
       sx={{
         backgroundColor: 'rgba(16, 20, 24, 0.8)',
         backdropFilter: 'blur(8px)',
-        // zIndex: 0,
+        // zIndex: '-1',
       }}
     >
       <Container maxWidth="xl"  >
@@ -30,6 +30,7 @@ const Header = () => {
           <nav className='flex gap-10'>
             < NavLink to='/'>Home</NavLink>
             < NavLink to='/contacts'>Contacts</NavLink>
+            {/* {isLoggedIn ? < NavLink to='/contacts'>Contacts</NavLink> : redirect('/home')} */}
             {isLoggedIn ? (
               <button className='cursor-pointer' onClick={() => dispatch(logoutThunk())}>Logout</button>
             ) : (
