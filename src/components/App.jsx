@@ -8,7 +8,7 @@ import Contacts from '../pages/Contacts/Contacts';
 import NotFound from '../pages/NotFound/NotFound';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
-import { refreshUser } from '../redux/authOperations';
+import { refreshUser } from '../redux/auth/authOperations';
 import { selectIsLoggedIn, selectIsRefreshing } from '../redux/selectors';
 import PrivateRoute from './PrivateRoutes';
 import PublicRoute from './PublicRoute';
@@ -20,7 +20,7 @@ const App = () => {
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
-  console.log('Log?:,', selectIsLoggedIn)
+
   return isRefreshing ? null : (
     <Routes>
       <Route path="/" element={<Layout />}>
