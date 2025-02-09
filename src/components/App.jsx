@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 //import { fetchContacts } from '../redux/contactsOps';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router';
 import Layout from './Layout/Layout';
 import HomePage from '../pages/HomePage/HomePage';
@@ -12,12 +12,12 @@ import { refreshUser } from '../redux/authOperations';
 
 const App = () => {
   const dispatch = useDispatch();
-
+  const isRefreshing = useSelector(isRefreshing);
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  return (
+  return isRefreshing ? null : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />

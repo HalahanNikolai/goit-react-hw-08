@@ -39,7 +39,11 @@ const authSlice = createSlice({
             .addCase(refreshUser.pending, state => {
                 state.isRefreshing = true;
             })
-            .addCase(refreshUser.fulfilled, handleFulfieldlRefresh);
+            .addCase(refreshUser.fulfilled, handleFulfieldlRefresh)
+
+            .addCase(refreshUser.rejected, state => {
+                state.isRefreshing = false;
+            })
     },
 });
 export const authReducer = authSlice.reducer;
