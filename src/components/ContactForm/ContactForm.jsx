@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContactsList } from '../../redux/selectors';
-import { addContact } from '../../redux/contactsOps';
+import { addContact } from '../../redux/contacts/contactsOps';
 
 import { FormWrap, InputContainer, ContactLabel, ContactInput, AddContactButton } from './ContactForm.styled';
 
@@ -31,7 +31,7 @@ export const ContactForm = () => {
     <FormWrap type="submit" onSubmit={handleSubmitForm}>
       <InputContainer>
         <ContactLabel>Name</ContactLabel>
-        <ContactInput
+        <ContactInput className='bg-white'
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -41,7 +41,7 @@ export const ContactForm = () => {
       </InputContainer>
       <InputContainer>
         <ContactLabel>Number</ContactLabel>
-        <ContactInput
+        <ContactInput className='bg-white'
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"

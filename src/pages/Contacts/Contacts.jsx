@@ -6,14 +6,14 @@ import ContactList from '../../components/ContatctsList/ContactsList';
 const Contacts = () => {
   return (
     <Section title="Phonebook">
-      <ContactForm></ContactForm>
+      <ContactForm ></ContactForm>
       <h2 style={{
         margin: '0 auto',
         padding: '20px 0',
         textAlign: 'center',
       }}>Contacts</h2>
       <Filter></Filter>
-      <ContactList></ContactList>
+      <ContactList className=''></ContactList>
     </Section>
   );
 };

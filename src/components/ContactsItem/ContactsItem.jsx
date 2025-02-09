@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/contactsOps';
+import { deleteContact } from '../../redux/contacts/contactsOps';
 import {
   ContactSpan,
   ContactLink,
@@ -12,7 +12,7 @@ function ContactsItem({ contact: { name, phone, id } }) {
 
   return (
     <>
-      <ContactSpan>{name}</ContactSpan>
+      <ContactSpan className=''>{name}</ContactSpan>
       <ContactLink href={`tel:${phone}`}>{phone}</ContactLink>
       <ContactDeleteBtn type="button" onClick={handleDelete}>
         Delete
