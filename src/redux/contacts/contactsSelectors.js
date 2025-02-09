@@ -6,5 +6,4 @@ export const getFilter = state => state.filter;
 export const selectIsLoading = state => state.contacts.isLoading;
 
 
-
 // 
