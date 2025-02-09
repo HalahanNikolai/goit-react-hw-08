@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts, selectError, selectIsLoading, selectIsLoggedIn } from '../../redux/selectors';
+import { getContacts, selectIsLoading } from '../../redux/selectors';
+import { selectError, selectIsLoggedIn } from '../../redux/auth/authSelectors';
 import { selectFilteredContacts } from '../../redux/contacts/contactsSlice';
 import {
   ContactListWrap,

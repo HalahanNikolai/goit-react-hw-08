@@ -1,10 +1,7 @@
-//import { Button } from "@mui/material"
 import { Field, Form, Formik } from "formik";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router";
 import { loginThunk } from "../../redux/auth/authOperations";
-import { selectIsLoggedIn, selectUser } from "../../redux/selectors";
-
 const Login = () => {
     const initialValues = {
         password: '',

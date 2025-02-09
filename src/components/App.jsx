@@ -9,9 +9,9 @@ import NotFound from '../pages/NotFound/NotFound';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import { refreshUser } from '../redux/auth/authOperations';
-import { selectIsLoggedIn, selectIsRefreshing } from '../redux/selectors';
+import { selectIsRefreshing } from '../redux/auth/authSelectors';
 import PrivateRoute from './PrivateRoutes';
-import PublicRoute from './PublicRoute';
+
 
 const App = () => {
   const isRefreshing = useSelector(selectIsRefreshing);
