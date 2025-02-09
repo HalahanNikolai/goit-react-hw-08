@@ -3,7 +3,7 @@ import {
   fetchContacts,
   addContact,
   deleteContact,
-} from './contactsOps';
+} from './contactsOperation';
 import { createSelector } from 'reselect';
 
 export const contactInitialState = {

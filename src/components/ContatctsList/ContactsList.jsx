@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts, selectIsLoading } from '../../redux/selectors';
+import { getContacts, selectIsLoading } from '../../redux/contacts/contactsSelectors';
 import { selectError, selectIsLoggedIn } from '../../redux/auth/authSelectors';
 import { selectFilteredContacts } from '../../redux/contacts/contactsSlice';
 import {
@@ -9,7 +9,7 @@ import {
 } from './ContactsList.styled';
 import ContactsItem from '../ContactsItem/ContactsItem';
 import { useEffect } from 'react';
-import { fetchContacts } from '../../redux/contacts/contactsOps';
+import { fetchContacts } from '../../redux/contacts/contactsOperation';
 
 
 const ContactList = () => {
