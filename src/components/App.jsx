@@ -11,6 +11,7 @@ import Register from '../pages/Register/Register';
 import { refreshUser } from '../redux/auth/authOperations';
 import { selectIsRefreshing } from '../redux/auth/authSelectors';
 import PrivateRoute from './PrivateRoutes';
+import PublicRoute from './PublicRoute';
 
 
 const App = () => {
@@ -25,10 +26,11 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
+        {/* <Route path="/contacts" element={<Contacts />} /> */}
         <Route path="/contacts" element={<PrivateRoute > <Contacts /> </PrivateRoute>} />
       </Route>
-      <Route path="/register" element={<Register />} />
-      {/* <Route path="/register" element={<PublicRoute> <Register /></PublicRoute>} /> */}
+      {/* <Route path="/register" element={<Register />} /> */}
+      <Route path="/register" element={<PublicRoute> <Register /></PublicRoute>} />
       <Route path="/login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

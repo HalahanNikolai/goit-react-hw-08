@@ -29,7 +29,7 @@ const Header = () => {
 
           <nav className='flex gap-10'>
             < NavLink to='/'>Home</NavLink>
-            < NavLink to='/contacts'>Contacts</NavLink>
+            {isLoggedIn && < NavLink to='/contacts'>Contacts</NavLink>}
             {/* {isLoggedIn ? < NavLink to='/contacts'>Contacts</NavLink> : redirect('/home')} */}
             {isLoggedIn ? (
               <button className='cursor-pointer' onClick={() => dispatch(logoutThunk())}>Logout</button>
