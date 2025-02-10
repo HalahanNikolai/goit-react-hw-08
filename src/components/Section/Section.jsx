@@ -3,7 +3,7 @@ import { SectionWrap, SectionContainer, SectionTitle } from './Section.styled';
 
 const Section = ({ title, children }) => {
   return (
-    <SectionWrap>
+    <SectionWrap >
       <SectionContainer>
         <SectionTitle>{title}</SectionTitle>
         {children}

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const SectionWrap = styled.section`
   margin: 0 auto;
+  margin-top: 100px;
   padding: 40px 0;
   text-align: left;
 `;
