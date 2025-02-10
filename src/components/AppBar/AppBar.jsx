@@ -1,12 +1,12 @@
 
 import { Toolbar, Container } from '@mui/material';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router';
 import { selectIsLoggedIn, selectUser } from '../../redux/auth/selectors';
 // import { logoutThunk } from '../../redux/auth/operations';
 import styles from './AppBar.module.css';
-import AuthNav from '../AuthNav/AuthNav.JSX';
 import UserMenu from '../UserMenu/UserMenu';
+import AuthNav from '../AuthNav/AuthNav';
 //* name(pin): "Vasya"
 //* email(pin): "vasya_qwerty@gmail.com"
 
